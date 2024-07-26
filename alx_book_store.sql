@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Books (
 CREATE TABLE IF NOT EXISTS Authors (
     author_id PRIMARY KEY,
     author_name VARCHAR(215),
-    FOREIGN KEY(author_id) REFERENCES Books(author_id)
+    FOREIGN KEY (author_id) REFERENCES Books(author_id)
 ):
 
 CREATE TABLE IF NOT EXISTS Customers (
@@ -34,6 +34,5 @@ CREATE TABLE IF NOT EXISTS Order_Details(
     order_id INT,
     book_id INT,
     quantity DOUBLE,
-    FOREIGN KEY(order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY(book_id) REFERENCES Books(book_id)
-);
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
