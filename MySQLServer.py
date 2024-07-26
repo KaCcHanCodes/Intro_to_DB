@@ -12,5 +12,5 @@ try:
     value = cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     connection.commit()
     print("Database 'alx_book_store' created successfully!")
-except Exception as e:
+except mysql.connector.Error as e:
     print(e)
